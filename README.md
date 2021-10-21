@@ -93,29 +93,6 @@ SerialTool 的波形显示模块使用简单的协议进行数据传输，我们
 3. 在“选择组件 (Select Components)”界面的Qt选项下需要勾选一个 Qt 主模块（例如MinGW 7.3.0 64-bit、MSVC 2017 64-bit等），此外还要勾选 Qt Charts 模块和 Qt Script 模块。如果你的系统中没有安装需要的编译器，你还要在Tools选项下中勾选需要的编译器（如MinGW 7.3.0 64bit）。
 4. 根据提示安装Qt。如果需要的话你可以为Qt设置环境变量。
 
-### 安装 QScintilla
-
-1. 下载 [QScintilla](https://riverbankcomputing.com/software/qscintilla/download) 源码并解压缩。
-2. 在 Windows 下，打开 *“开始菜单 -> 程序列表 -> Qt 5.12.0 -> Qt 5.12.0 for Desktop (MinGW 7.3.0 64-bit)”*。Linux 下直接打开终端即可（需要[设置 Qt 的环境变量](https://www.linuxprobe.com/linux-qt.html)）。
-3. 打开 QScintilla_gpl-2.10.8/Qt4Qt5 文件夹。具体操作为：
-   * 假设 Windows 下路径为 "C:\QScintilla_gpl-2.10.8\Qt4Qt5"，执行操作
-     ``` cmd
-     cd C:\QScintilla_gpl-2.10.8\Qt4Qt5
-     qmake
-     mingw32-make
-     mingw32-make install
-     qmake CONFIG+=debug
-     mingw32-make
-     mingw32-make install
-     ```
-   * 假设 Linux 下路径为 "~/QScintilla_gpl-2.10.8/Qt4Qt5" 则执行操作
-     ``` bash
-     cd ~/QScintilla_gpl-2.10.8/Qt4Qt5
-     qmake
-     make
-     make install
-     ```
-
 ### 编译 SerialTool
 
 1. 使用 Qt Creator 打开 "SerialTool/SerialTool/SerialTool.pro" 文件。
